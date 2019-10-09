@@ -7,7 +7,7 @@ Your Jinja2 might look like:
 -s config.system.name {{ inventory_hostname }}
 ```
 
-This is turned into `sudo -s config.system.name=...`
+This is turned into `sudo config -s config.system.name=...`
 
 We use `cp` to store a state between "running" and "startup". Diffs are created by moving `config.xml` around and seeing what changed.
 
